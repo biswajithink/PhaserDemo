@@ -4,7 +4,7 @@ demo.state0.prototype = {
     //it's use for preload images & it called one time.
     preload: function(){
         // first argument(key for image), second argument (path the images)
-        //game.load.image('charecterOne', 'assets/sprites/Jetpack.png');
+        game.load.image('charecterTwo', 'assets/sprites/puss-in-boots.png');
         
         // SpriteSheet
         game.load.spritesheet('charecterOne', 'assets/spritesheet/charecterOneSpritesheet.png', 700, 700);
@@ -16,7 +16,7 @@ demo.state0.prototype = {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         
         game.stage.backgroundColor = '#000';
-        console.log('state0');
+        //console.log('state0');
         
         // add(listner(), listnerContext, priority, args)
         /* 1st stage
@@ -52,6 +52,8 @@ demo.state0.prototype = {
         //game.add.sprite(1500/2, 1000/2, 'charecterOne'); // 1st step
         //game.add.sprite(centerX, centerY, 'charecterOne'); // 2nd step
         charecterOne = game.add.sprite(centerX, centerY, 'charecterOne'); // 2nd step
+        
+        
         
         
         
@@ -107,6 +109,7 @@ demo.state0.prototype = {
 };
 function changeState(i, stateNum){
     //console.log(i);
+    console.log('state' + stateNum);
     game.state.start('state' + stateNum);
 }
 

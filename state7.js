@@ -6,7 +6,7 @@ demo.state7.prototype = {
     // it's use for settings the initial value of everything in game state.
     create: function(){
         game.stage.backgroundColor = '#bf40bf';
-        console.log('state7');
+        //console.log('state7');
         addChangeStateEventListeners();
     }, 
     // it's update the frame of the game. 60times of a game.
