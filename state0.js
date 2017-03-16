@@ -1,4 +1,4 @@
-var demo = {}, centerX = 1500/2, centerY = 1000/2, charecterOne, speed = 6;
+var demo = {}, centerX = 1500/2, centerY = 1000/2, charecterOne, speed = 6, charecterTwo;
 demo.state0 = function(){};
 demo.state0.prototype = {
     //it's use for preload images & it called one time.
