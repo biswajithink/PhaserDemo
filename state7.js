@@ -20,13 +20,13 @@ demo.state7.prototype = {
     // it's update the frame of the game. 60times of a game.
     update: function(){},
     startSwipe: function(){
-        //console.log(game.input.x + ' ' + game.input.y); // area where the mouse cilckable
+        //console.log(game.input.x + ' ' + game.input.y); // get the position where the mouse cilckable
         
         startPointX = game.input.x; // position of x
         startPointY = game.input.y; // position of y 
     },
     getSwipeDirection: function(){
-        //console.log(game.input.x + ' ' + game.input.y); // area where the mouse cilckable
+        //console.log(game.input.x + ' ' + game.input.y); // location the mouse swipe/clickable right/left or top/bottom
         
         endPointX = game.input.x; // position of x
         endPointY = game.input.y; // position of y
@@ -39,8 +39,10 @@ demo.state7.prototype = {
             console.log('Horizontal');
             if(endPointX > startPointX){
                 swipeDirection = 180;
+                changeState(null, 6);
             } else{
                 swipeDirection = 0;
+                changeState(null, 8);
             }
         }else{
             console.log('Vertical');
